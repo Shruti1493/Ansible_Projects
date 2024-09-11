@@ -24,7 +24,7 @@ apt-get install openssh-server
 service ssh start
  ```
 
-#### Verify SSH configuration:
+-  Verify SSH configuration:
 Ensure that the SSH service is running properly inside the container, and port 22 is open. You can check with:
 
 
@@ -32,3 +32,35 @@ Ensure that the SSH service is running properly inside the container, and port 2
 netstat -tuln | grep 22
  ```
 
+### Ensure that the SSH server is configured to allow root login. Check the SSH configuration file (/etc/ssh/sshd_config) inside the target container:
+
+```bash
+apt-get install nano
+```
+
+```bash
+nano /etc/ssh/sshd_config
+```
+
+*** PermitRootLogin yes ***
+
+ service ssh restart
+
+ 
+
+### In the container from which you want to connect, ensure that openssh-client is installed.
+
+```bash
+apt-get install openssh-client
+ ```
+
+
+## Check for Running apt-get Processes:
+
+```bash
+ps aux | grep apt
+```
+
+```bash
+kill -9 <PID>
+```
