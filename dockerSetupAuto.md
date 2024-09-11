@@ -1,20 +1,18 @@
 ```bash
  apt-get update
- ```
+```
 
- ```bash
- apt-get install net-tools
- ```
-
+```bash
+apt-get install net-tools
+```
 
 ```bash
  apt-get install openssh-client
- ```
-
+```
 
 ### Install SSH server in the target container
 
-- Install openssh-server:
+-   Install openssh-server:
 
 ```bash
 apt-get install openssh-server
@@ -22,15 +20,14 @@ apt-get install openssh-server
 
 ```bash
 service ssh start
- ```
+```
 
--  Verify SSH configuration:
-Ensure that the SSH service is running properly inside the container, and port 22 is open. You can check with:
-
+-   Verify SSH configuration:
+    Ensure that the SSH service is running properly inside the container, and port 22 is open. You can check with:
 
 ```bash
 netstat -tuln | grep 22
- ```
+```
 
 ### Ensure that the SSH server is configured to allow root login. Check the SSH configuration file (/etc/ssh/sshd_config) inside the target container:
 
@@ -42,18 +39,15 @@ apt-get install nano
 nano /etc/ssh/sshd_config
 ```
 
-*** PermitRootLogin yes ***
+**_ PermitRootLogin yes _**
 
- service ssh restart
-
- 
+service ssh restart
 
 ### In the container from which you want to connect, ensure that openssh-client is installed.
 
 ```bash
 apt-get install openssh-client
- ```
-
+```
 
 ## Check for Running apt-get Processes:
 
