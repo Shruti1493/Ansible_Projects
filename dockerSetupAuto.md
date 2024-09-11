@@ -14,9 +14,9 @@ apt-get install net-tools
  apt-get install coreutils
 ```
 
-### Install SSH server in the target container
+## Install SSH server in the target container
 
--   Install openssh-server:
+###  Install openssh-server:
 
 ```bash
 apt-get install openssh-server
