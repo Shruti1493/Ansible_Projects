@@ -32,6 +32,10 @@ mkdir ansible
 touch hosts
 ```
 
+### apt install nano
+
+
+
 The default inventory file provided by the Ansible installation contains a number of examples that you can use as references for setting up your inventory. The following example defines a group named [servers] with three different servers in it, each identified by a custom alias: server1, server2, and server3. Be sure to replace the highlighted IPs with the IP addresses of your Ansible hosts.
 ```yaml
 [servers]
