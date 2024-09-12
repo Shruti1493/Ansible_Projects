@@ -1,0 +1,19 @@
+---
+- name: Creating a Cron Job
+  hosts: webservers
+
+  tasks:
+    - name: Ensure Cron is installed
+      package:
+        name: cron
+        state: present
+
+    - name: Run a Script
+      cron:
+        name: Run My Script
+        minute: 28
+        hour: 19
+        day: 12
+        month: "*"
+        weekday: "*"
+        job: /temp/script/test.sh
