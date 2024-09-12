@@ -1,3 +1,6 @@
-### Playboom for installing and starting a package
+### Playboom for installing and starting nginx on ubuntu docker container
 
-service nginx status
+ turns out my system wasn't booted using systemd as init system. So I changed the Ansible module from ansible.builtin.systemd to ansible.builtin.sysvinit
+
+
+<!-- service nginx status -->

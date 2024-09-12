@@ -1,0 +1,13 @@
+---
+- name: Install and start the service
+  hosts: localhost
+
+  tasks:
+    - name: Installing nginx
+      apt:
+          name: nginx
+          state: present
+    - name: Starting the nginx server
+      ansible.builtin.sysvinit:
+          name: nginx
+          state: started
