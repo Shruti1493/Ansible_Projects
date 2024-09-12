@@ -1,0 +1,20 @@
+---
+- name: CRUD File Operations
+  hosts: webservers
+
+  tasks:
+  - name: Create a file on remote server
+    file:
+      path: /home/CFile.txt
+      state: touch
+
+
+  - name: Create Dir
+    file:
+      path: /home/Dir
+      state: directory
+
+  - name: Delete file
+    file:
+      path: /home/CFile.txt
+      state: absent
