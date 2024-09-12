@@ -12,13 +12,25 @@ ansible-playbook first_py.yml
 ![alt text](image.png)
 
 
+### Syntax check
 ```bash
-ansible-inventory --list -y
+ansible-playbook --syntax-check first_py.yml
 ```
 
+yaml code
 
-```bash
-ansible-inventory --list -y
+```yml
+---
+- name: My First Playbook
+  hosts: localhost
+
+
+  tasks:
+  - name: Test COnnectivity
+    ping:
+  - name: "Print My message"
+    debug: msg="This is shruti"
+
 ```
 
 
