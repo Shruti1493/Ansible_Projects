@@ -1,0 +1,11 @@
+---
+- name: User Management
+  hosts: webservers
+
+  tasks:
+    - name: CReate Nick User
+      user:
+        name: nick
+        comment: Nick user for QA Team
+        shell: /bin/bash
+        group: QA
