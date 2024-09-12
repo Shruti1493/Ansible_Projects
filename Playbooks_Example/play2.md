@@ -2,5 +2,5 @@
 
  turns out my system wasn't booted using systemd as init system. So I changed the Ansible module from ansible.builtin.systemd to ansible.builtin.sysvinit
 
-
-<!-- service nginx status -->
+# Without using systemctl
+service nginx status  
