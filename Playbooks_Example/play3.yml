@@ -1,0 +1,12 @@
+---
+- name: Copy file from ansible node to remote node
+  hosts: webservers
+
+  tasks:
+    - name: COpy files
+      copy:
+          src: /myfile.txt
+          dest: /
+          ownerL: Shruti1
+          mode: ugo=rw
+          backup: true

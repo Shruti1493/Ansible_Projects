@@ -40,7 +40,7 @@ ansible-inventory --list -y
 ```
 
 
-
+### Ping all the specified host in hosts file
 ```bash
-ansible-inventory --list -y
+ansible all -m ping
 ```

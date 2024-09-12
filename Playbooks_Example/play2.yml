@@ -1,6 +1,6 @@
 ---
 - name: Install and start the service
-  hosts: localhost
+  hosts: webservers
 
   tasks:
     - name: Installing nginx
